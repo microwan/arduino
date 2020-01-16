@@ -10,6 +10,38 @@
  */
 package fr.obeo.dsl.arduino.impl;
 
+import fr.obeo.dsl.arduino.AnalogPin;
+import fr.obeo.dsl.arduino.ArduinoFactory;
+import fr.obeo.dsl.arduino.ArduinoPackage;
+import fr.obeo.dsl.arduino.BooleanOperator;
+import fr.obeo.dsl.arduino.Connector;
+import fr.obeo.dsl.arduino.Constant;
+import fr.obeo.dsl.arduino.Delay;
+import fr.obeo.dsl.arduino.DigitalPin;
+import fr.obeo.dsl.arduino.Function;
+import fr.obeo.dsl.arduino.FunctionCall;
+import fr.obeo.dsl.arduino.Hardware;
+import fr.obeo.dsl.arduino.If;
+import fr.obeo.dsl.arduino.InputModule;
+import fr.obeo.dsl.arduino.Level;
+import fr.obeo.dsl.arduino.Library;
+import fr.obeo.dsl.arduino.ModuleKind;
+import fr.obeo.dsl.arduino.NumericalOperator;
+import fr.obeo.dsl.arduino.OperatorKind;
+import fr.obeo.dsl.arduino.OutputModule;
+import fr.obeo.dsl.arduino.ParameterCall;
+import fr.obeo.dsl.arduino.ParameterDefinition;
+import fr.obeo.dsl.arduino.ParameterType;
+import fr.obeo.dsl.arduino.Platform;
+import fr.obeo.dsl.arduino.Project;
+import fr.obeo.dsl.arduino.Repeat;
+import fr.obeo.dsl.arduino.Sensor;
+import fr.obeo.dsl.arduino.Set;
+import fr.obeo.dsl.arduino.Sketch;
+import fr.obeo.dsl.arduino.Status;
+import fr.obeo.dsl.arduino.Time;
+import fr.obeo.dsl.arduino.Variable;
+import fr.obeo.dsl.arduino.While;
 import fr.obeo.dsl.arduino.*;
 
 import org.eclipse.emf.ecore.EClass;
@@ -146,6 +178,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Hardware createHardware() {
 		HardwareImpl hardware = new HardwareImpl();
 		return hardware;
@@ -156,6 +189,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Platform createPlatform() {
 		PlatformImpl platform = new PlatformImpl();
 		return platform;
@@ -166,6 +200,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DigitalPin createDigitalPin() {
 		DigitalPinImpl digitalPin = new DigitalPinImpl();
 		return digitalPin;
@@ -176,6 +211,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnalogPin createAnalogPin() {
 		AnalogPinImpl analogPin = new AnalogPinImpl();
 		return analogPin;
@@ -186,6 +222,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Sketch createSketch() {
 		SketchImpl sketch = new SketchImpl();
 		return sketch;
@@ -196,6 +233,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Project createProject() {
 		ProjectImpl project = new ProjectImpl();
 		return project;
@@ -206,6 +244,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Status createStatus() {
 		StatusImpl status = new StatusImpl();
 		return status;
@@ -216,6 +255,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Level createLevel() {
 		LevelImpl level = new LevelImpl();
 		return level;
@@ -226,6 +266,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Delay createDelay() {
 		DelayImpl delay = new DelayImpl();
 		return delay;
@@ -236,6 +277,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputModule createInputModule() {
 		InputModuleImpl inputModule = new InputModuleImpl();
 		return inputModule;
@@ -246,6 +288,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputModule createOutputModule() {
 		OutputModuleImpl outputModule = new OutputModuleImpl();
 		return outputModule;
@@ -256,6 +299,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector createConnector() {
 		ConnectorImpl connector = new ConnectorImpl();
 		return connector;
@@ -266,6 +310,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Repeat createRepeat() {
 		RepeatImpl repeat = new RepeatImpl();
 		return repeat;
@@ -276,6 +321,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Sensor createSensor() {
 		SensorImpl sensor = new SensorImpl();
 		return sensor;
@@ -286,6 +332,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public While createWhile() {
 		WhileImpl while_ = new WhileImpl();
 		return while_;
@@ -296,6 +343,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable createVariable() {
 		VariableImpl variable = new VariableImpl();
 		return variable;
@@ -306,6 +354,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Set createSet() {
 		SetImpl set = new SetImpl();
 		return set;
@@ -316,6 +365,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NumericalOperator createNumericalOperator() {
 		NumericalOperatorImpl numericalOperator = new NumericalOperatorImpl();
 		return numericalOperator;
@@ -326,6 +376,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanOperator createBooleanOperator() {
 		BooleanOperatorImpl booleanOperator = new BooleanOperatorImpl();
 		return booleanOperator;
@@ -336,6 +387,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constant createConstant() {
 		ConstantImpl constant = new ConstantImpl();
 		return constant;
@@ -346,6 +398,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public If createIf() {
 		IfImpl if_ = new IfImpl();
 		return if_;
@@ -356,6 +409,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Function createFunction() {
 		FunctionImpl function = new FunctionImpl();
 		return function;
@@ -366,6 +420,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition createParameterDefinition() {
 		ParameterDefinitionImpl parameterDefinition = new ParameterDefinitionImpl();
 		return parameterDefinition;
@@ -376,6 +431,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FunctionCall createFunctionCall() {
 		FunctionCallImpl functionCall = new FunctionCallImpl();
 		return functionCall;
@@ -386,6 +442,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterCall createParameterCall() {
 		ParameterCallImpl parameterCall = new ParameterCallImpl();
 		return parameterCall;
@@ -496,6 +553,7 @@ public class ArduinoFactoryImpl extends EFactoryImpl implements ArduinoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArduinoPackage getArduinoPackage() {
 		return (ArduinoPackage)getEPackage();
 	}

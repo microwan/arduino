@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.SketchImpl#getPrevious <em>Previous</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.SketchImpl#getNext <em>Next</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.arduino.impl.SketchImpl#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.SketchImpl#getFunctions <em>Functions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -123,6 +123,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instruction getPrevious() {
 		if (previous != null && previous.eIsProxy()) {
 			InternalEObject oldPrevious = (InternalEObject)previous;
@@ -149,6 +150,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrevious(Instruction newPrevious) {
 		Instruction oldPrevious = previous;
 		previous = newPrevious;
@@ -161,6 +163,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instruction getNext() {
 		if (next != null && next.eIsProxy()) {
 			InternalEObject oldNext = (InternalEObject)next;
@@ -187,6 +190,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNext(Instruction newNext) {
 		Instruction oldNext = next;
 		next = newNext;
@@ -199,6 +203,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Hardware getHardware() {
 		if (hardware != null && hardware.eIsProxy()) {
 			InternalEObject oldHardware = (InternalEObject)hardware;
@@ -225,6 +230,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHardware(Hardware newHardware) {
 		Hardware oldHardware = hardware;
 		hardware = newHardware;
@@ -237,6 +243,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Instruction> getInstructions() {
 		if (instructions == null) {
 			instructions = new EObjectContainmentEList<Instruction>(Instruction.class, this, ArduinoPackage.SKETCH__INSTRUCTIONS);
@@ -249,6 +256,7 @@ public class SketchImpl extends NamedElementImpl implements Sketch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Function> getFunctions() {
 		if (functions == null) {
 			functions = new EObjectContainmentEList<Function>(Function.class, this, ArduinoPackage.SKETCH__FUNCTIONS);

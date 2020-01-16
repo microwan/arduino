@@ -19,12 +19,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Platform#getDigitalPins <em>Digital Pins</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Platform#getAnalogPins <em>Analog Pins</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Platform#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getPlatform()
  * @model

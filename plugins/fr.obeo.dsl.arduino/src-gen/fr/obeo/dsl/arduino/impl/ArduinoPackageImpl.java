@@ -383,7 +383,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ArduinoPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -397,7 +397,8 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 		if (isInited) return (ArduinoPackage)EPackage.Registry.INSTANCE.getEPackage(ArduinoPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ArduinoPackageImpl theArduinoPackage = (ArduinoPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ArduinoPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ArduinoPackageImpl());
+		Object registeredArduinoPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ArduinoPackageImpl theArduinoPackage = registeredArduinoPackage instanceof ArduinoPackageImpl ? (ArduinoPackageImpl)registeredArduinoPackage : new ArduinoPackageImpl();
 
 		isInited = true;
 
@@ -410,7 +411,6 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 		// Mark meta-data to indicate it can't be changed
 		theArduinoPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ArduinoPackage.eNS_URI, theArduinoPackage);
 		return theArduinoPackage;
@@ -421,6 +421,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getHardware() {
 		return hardwareEClass;
 	}
@@ -430,6 +431,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHardware_Platforms() {
 		return (EReference)hardwareEClass.getEStructuralFeatures().get(0);
 	}
@@ -439,6 +441,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHardware_Modules() {
 		return (EReference)hardwareEClass.getEStructuralFeatures().get(1);
 	}
@@ -448,6 +451,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHardware_Connectors() {
 		return (EReference)hardwareEClass.getEStructuralFeatures().get(2);
 	}
@@ -457,6 +461,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlatform() {
 		return platformEClass;
 	}
@@ -466,6 +471,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlatform_DigitalPins() {
 		return (EReference)platformEClass.getEStructuralFeatures().get(0);
 	}
@@ -475,6 +481,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlatform_AnalogPins() {
 		return (EReference)platformEClass.getEStructuralFeatures().get(1);
 	}
@@ -484,6 +491,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPlatform_Image() {
 		return (EAttribute)platformEClass.getEStructuralFeatures().get(2);
 	}
@@ -493,6 +501,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModule() {
 		return moduleEClass;
 	}
@@ -502,6 +511,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModule_Kind() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(0);
 	}
@@ -511,6 +521,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModule_Image() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(1);
 	}
@@ -520,6 +531,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModule_Level() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(2);
 	}
@@ -529,6 +541,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModule_Library() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(3);
 	}
@@ -538,6 +551,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDigitalPin() {
 		return digitalPinEClass;
 	}
@@ -547,6 +561,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPin() {
 		return pinEClass;
 	}
@@ -556,6 +571,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPin_Id() {
 		return (EAttribute)pinEClass.getEStructuralFeatures().get(0);
 	}
@@ -565,6 +581,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnalogPin() {
 		return analogPinEClass;
 	}
@@ -574,6 +591,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSketch() {
 		return sketchEClass;
 	}
@@ -583,6 +601,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSketch_Hardware() {
 		return (EReference)sketchEClass.getEStructuralFeatures().get(0);
 	}
@@ -592,6 +611,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSketch_Instructions() {
 		return (EReference)sketchEClass.getEStructuralFeatures().get(1);
 	}
@@ -601,6 +621,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSketch_Functions() {
 		return (EReference)sketchEClass.getEStructuralFeatures().get(2);
 	}
@@ -610,6 +631,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProject() {
 		return projectEClass;
 	}
@@ -619,6 +641,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProject_Hardware() {
 		return (EReference)projectEClass.getEStructuralFeatures().get(0);
 	}
@@ -628,6 +651,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProject_Sketch() {
 		return (EReference)projectEClass.getEStructuralFeatures().get(1);
 	}
@@ -637,6 +661,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProject_Modules() {
 		return (EReference)projectEClass.getEStructuralFeatures().get(2);
 	}
@@ -646,6 +671,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProject_Platform() {
 		return (EReference)projectEClass.getEStructuralFeatures().get(3);
 	}
@@ -655,6 +681,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInstruction() {
 		return instructionEClass;
 	}
@@ -664,6 +691,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInstruction_Previous() {
 		return (EReference)instructionEClass.getEStructuralFeatures().get(0);
 	}
@@ -673,6 +701,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInstruction_Next() {
 		return (EReference)instructionEClass.getEStructuralFeatures().get(1);
 	}
@@ -682,6 +711,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatus() {
 		return statusEClass;
 	}
@@ -691,6 +721,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStatus_Status() {
 		return (EAttribute)statusEClass.getEStructuralFeatures().get(0);
 	}
@@ -700,6 +731,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStatus_Sensor() {
 		return (EReference)statusEClass.getEStructuralFeatures().get(1);
 	}
@@ -709,6 +741,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLevel() {
 		return levelEClass;
 	}
@@ -718,6 +751,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLevel_Level() {
 		return (EReference)levelEClass.getEStructuralFeatures().get(0);
 	}
@@ -727,6 +761,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModuleInstruction() {
 		return moduleInstructionEClass;
 	}
@@ -736,6 +771,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModuleInstruction_Module() {
 		return (EReference)moduleInstructionEClass.getEStructuralFeatures().get(0);
 	}
@@ -745,6 +781,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getControl() {
 		return controlEClass;
 	}
@@ -754,6 +791,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getControl_Instructions() {
 		return (EReference)controlEClass.getEStructuralFeatures().get(0);
 	}
@@ -763,6 +801,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUtilities() {
 		return utilitiesEClass;
 	}
@@ -772,6 +811,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIO() {
 		return ioEClass;
 	}
@@ -781,6 +821,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDelay() {
 		return delayEClass;
 	}
@@ -790,6 +831,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDelay_Unit() {
 		return (EAttribute)delayEClass.getEStructuralFeatures().get(0);
 	}
@@ -799,6 +841,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDelay_Value() {
 		return (EAttribute)delayEClass.getEStructuralFeatures().get(1);
 	}
@@ -808,6 +851,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInputModule() {
 		return inputModuleEClass;
 	}
@@ -817,6 +861,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputModule() {
 		return outputModuleEClass;
 	}
@@ -826,6 +871,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -835,6 +881,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElement_Name() {
 		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -844,6 +891,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConnector() {
 		return connectorEClass;
 	}
@@ -853,6 +901,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnector_Pin() {
 		return (EReference)connectorEClass.getEStructuralFeatures().get(0);
 	}
@@ -862,6 +911,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnector_Module() {
 		return (EReference)connectorEClass.getEStructuralFeatures().get(1);
 	}
@@ -871,6 +921,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRepeat() {
 		return repeatEClass;
 	}
@@ -880,6 +931,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRepeat_Iteration() {
 		return (EAttribute)repeatEClass.getEStructuralFeatures().get(0);
 	}
@@ -889,6 +941,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSensor() {
 		return sensorEClass;
 	}
@@ -898,6 +951,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSensor_Status() {
 		return (EReference)sensorEClass.getEStructuralFeatures().get(0);
 	}
@@ -907,6 +961,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWhile() {
 		return whileEClass;
 	}
@@ -916,6 +971,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhile_Condition() {
 		return (EReference)whileEClass.getEStructuralFeatures().get(0);
 	}
@@ -925,6 +981,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMathOperator() {
 		return mathOperatorEClass;
 	}
@@ -934,6 +991,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMathOperator_Left() {
 		return (EReference)mathOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -943,6 +1001,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMathOperator_Right() {
 		return (EReference)mathOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -952,6 +1011,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMathOperator_Operator() {
 		return (EAttribute)mathOperatorEClass.getEStructuralFeatures().get(2);
 	}
@@ -961,6 +1021,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -970,6 +1031,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVariable_Name() {
 		return (EAttribute)variableEClass.getEStructuralFeatures().get(0);
 	}
@@ -979,6 +1041,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSet() {
 		return setEClass;
 	}
@@ -988,6 +1051,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSet_Variable() {
 		return (EReference)setEClass.getEStructuralFeatures().get(0);
 	}
@@ -997,6 +1061,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSet_Value() {
 		return (EReference)setEClass.getEStructuralFeatures().get(1);
 	}
@@ -1006,6 +1071,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNumericalOperator() {
 		return numericalOperatorEClass;
 	}
@@ -1015,6 +1081,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBooleanOperator() {
 		return booleanOperatorEClass;
 	}
@@ -1024,6 +1091,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getValue() {
 		return valueEClass;
 	}
@@ -1033,6 +1101,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getValue_Value() {
 		return (EAttribute)valueEClass.getEStructuralFeatures().get(0);
 	}
@@ -1042,6 +1111,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConstant() {
 		return constantEClass;
 	}
@@ -1051,6 +1121,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIf() {
 		return ifEClass;
 	}
@@ -1060,6 +1131,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIf_Condition() {
 		return (EReference)ifEClass.getEStructuralFeatures().get(0);
 	}
@@ -1069,6 +1141,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFunction() {
 		return functionEClass;
 	}
@@ -1078,6 +1151,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFunction_Name() {
 		return (EAttribute)functionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1087,6 +1161,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunction_ParamDefs() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1096,6 +1171,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunction_Instructions() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(2);
 	}
@@ -1105,6 +1181,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameterDefinition() {
 		return parameterDefinitionEClass;
 	}
@@ -1114,6 +1191,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameterDefinition_Type() {
 		return (EAttribute)parameterDefinitionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1123,6 +1201,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameterDefinition_Name() {
 		return (EAttribute)parameterDefinitionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1132,6 +1211,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -1141,6 +1221,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParameter_Definition() {
 		return (EReference)parameterEClass.getEStructuralFeatures().get(0);
 	}
@@ -1150,6 +1231,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFunctionCall() {
 		return functionCallEClass;
 	}
@@ -1159,6 +1241,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunctionCall_Definition() {
 		return (EReference)functionCallEClass.getEStructuralFeatures().get(0);
 	}
@@ -1168,6 +1251,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunctionCall_Parameters() {
 		return (EReference)functionCallEClass.getEStructuralFeatures().get(1);
 	}
@@ -1177,6 +1261,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameterCall() {
 		return parameterCallEClass;
 	}
@@ -1186,6 +1271,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParameterCall_Definition() {
 		return (EReference)parameterCallEClass.getEStructuralFeatures().get(0);
 	}
@@ -1195,6 +1281,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getTime() {
 		return timeEEnum;
 	}
@@ -1204,6 +1291,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getModuleKind() {
 		return moduleKindEEnum;
 	}
@@ -1213,6 +1301,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getOperatorKind() {
 		return operatorKindEEnum;
 	}
@@ -1222,6 +1311,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLibrary() {
 		return libraryEEnum;
 	}
@@ -1231,6 +1321,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getParameterType() {
 		return parameterTypeEEnum;
 	}
@@ -1240,6 +1331,7 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArduinoFactory getArduinoFactory() {
 		return (ArduinoFactory)getEFactoryInstance();
 	}
@@ -1469,11 +1561,11 @@ public class ArduinoPackageImpl extends EPackageImpl implements ArduinoPackage {
 		initEReference(getPlatform_AnalogPins(), this.getAnalogPin(), null, "analogPins", null, 0, -1, Platform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlatform_Image(), ecorePackage.getEString(), "image", null, 0, 1, Platform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(moduleEClass, Module.class, "Module", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getModule_Kind(), this.getModuleKind(), "kind", "digital", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModule_Image(), ecorePackage.getEString(), "image", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModule_Level(), ecorePackage.getEBoolean(), "level", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModule_Library(), this.getLibrary(), "library", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(moduleEClass, fr.obeo.dsl.arduino.Module.class, "Module", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getModule_Kind(), this.getModuleKind(), "kind", "digital", 0, 1, fr.obeo.dsl.arduino.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_Image(), ecorePackage.getEString(), "image", null, 0, 1, fr.obeo.dsl.arduino.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_Level(), ecorePackage.getEBoolean(), "level", null, 0, 1, fr.obeo.dsl.arduino.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_Library(), this.getLibrary(), "library", null, 0, 1, fr.obeo.dsl.arduino.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(digitalPinEClass, DigitalPin.class, "DigitalPin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

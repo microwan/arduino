@@ -19,10 +19,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Sensor#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getSensor()
  * @model

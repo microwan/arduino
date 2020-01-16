@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ModuleInstructionImpl#getDefinition <em>Definition</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ModuleInstructionImpl#getModule <em>Module</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -56,7 +56,7 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 	 * @generated
 	 * @ordered
 	 */
-	protected Module module;
+	protected fr.obeo.dsl.arduino.Module module;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,6 +82,7 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
@@ -108,6 +109,7 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(ParameterDefinition newDefinition) {
 		ParameterDefinition oldDefinition = definition;
 		definition = newDefinition;
@@ -120,10 +122,11 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Module getModule() {
+	@Override
+	public fr.obeo.dsl.arduino.Module getModule() {
 		if (module != null && module.eIsProxy()) {
 			InternalEObject oldModule = (InternalEObject)module;
-			module = (Module)eResolveProxy(oldModule);
+			module = (fr.obeo.dsl.arduino.Module)eResolveProxy(oldModule);
 			if (module != oldModule) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArduinoPackage.MODULE_INSTRUCTION__MODULE, oldModule, module));
@@ -137,7 +140,7 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Module basicGetModule() {
+	public fr.obeo.dsl.arduino.Module basicGetModule() {
 		return module;
 	}
 
@@ -146,8 +149,9 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setModule(Module newModule) {
-		Module oldModule = module;
+	@Override
+	public void setModule(fr.obeo.dsl.arduino.Module newModule) {
+		fr.obeo.dsl.arduino.Module oldModule = module;
 		module = newModule;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ArduinoPackage.MODULE_INSTRUCTION__MODULE, oldModule, module));
@@ -183,7 +187,7 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 				setDefinition((ParameterDefinition)newValue);
 				return;
 			case ArduinoPackage.MODULE_INSTRUCTION__MODULE:
-				setModule((Module)newValue);
+				setModule((fr.obeo.dsl.arduino.Module)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -201,7 +205,7 @@ public abstract class ModuleInstructionImpl extends InstructionImpl implements M
 				setDefinition((ParameterDefinition)null);
 				return;
 			case ArduinoPackage.MODULE_INSTRUCTION__MODULE:
-				setModule((Module)null);
+				setModule((fr.obeo.dsl.arduino.Module)null);
 				return;
 		}
 		super.eUnset(featureID);

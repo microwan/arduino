@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Project#getHardware <em>Hardware</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Project#getSketch <em>Sketch</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Project#getModules <em>Modules</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Project#getPlatform <em>Platform</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getProject()
  * @model
@@ -100,7 +100,7 @@ public interface Project extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Module> getModules();
+	EList<fr.obeo.dsl.arduino.Module> getModules();
 
 	/**
 	 * Returns the value of the '<em><b>Platform</b></em>' containment reference list.

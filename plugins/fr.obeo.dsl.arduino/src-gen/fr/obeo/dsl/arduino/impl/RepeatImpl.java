@@ -25,10 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.RepeatImpl#getIteration <em>Iteration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,6 +77,7 @@ public class RepeatImpl extends ControlImpl implements Repeat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getIteration() {
 		return iteration;
 	}
@@ -86,6 +87,7 @@ public class RepeatImpl extends ControlImpl implements Repeat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIteration(int newIteration) {
 		int oldIteration = iteration;
 		iteration = newIteration;
@@ -160,7 +162,7 @@ public class RepeatImpl extends ControlImpl implements Repeat {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (iteration: ");
 		result.append(iteration);
 		result.append(')');

@@ -18,10 +18,10 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.ParameterCall#getDefinition <em>Definition</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getParameterCall()
  * @model

@@ -18,10 +18,10 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Repeat#getIteration <em>Iteration</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getRepeat()
  * @model

@@ -28,12 +28,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.MathOperatorImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.MathOperatorImpl#getRight <em>Right</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.MathOperatorImpl#getOperator <em>Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -102,6 +102,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getLeft() {
 		if (left != null && left.eIsProxy()) {
 			InternalEObject oldLeft = (InternalEObject)left;
@@ -128,6 +129,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeft(Value newLeft) {
 		Value oldLeft = left;
 		left = newLeft;
@@ -140,6 +142,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getRight() {
 		if (right != null && right.eIsProxy()) {
 			InternalEObject oldRight = (InternalEObject)right;
@@ -166,6 +169,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRight(Value newRight) {
 		Value oldRight = right;
 		right = newRight;
@@ -178,6 +182,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperatorKind getOperator() {
 		return operator;
 	}
@@ -187,6 +192,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(OperatorKind newOperator) {
 		OperatorKind oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
@@ -283,7 +289,7 @@ public abstract class MathOperatorImpl extends ValueImpl implements MathOperator
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (operator: ");
 		result.append(operator);
 		result.append(')');

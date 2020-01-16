@@ -29,12 +29,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.StatusImpl#getValue <em>Value</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.StatusImpl#isStatus <em>Status</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.StatusImpl#getSensor <em>Sensor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -113,6 +113,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -122,6 +123,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -134,6 +136,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatus() {
 		return status;
 	}
@@ -143,6 +146,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(boolean newStatus) {
 		boolean oldStatus = status;
 		status = newStatus;
@@ -155,6 +159,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Sensor getSensor() {
 		if (sensor != null && sensor.eIsProxy()) {
 			InternalEObject oldSensor = (InternalEObject)sensor;
@@ -196,6 +201,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSensor(Sensor newSensor) {
 		if (newSensor != sensor) {
 			NotificationChain msgs = null;
@@ -360,7 +366,7 @@ public class StatusImpl extends ModuleInstructionImpl implements Status {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(", status: ");

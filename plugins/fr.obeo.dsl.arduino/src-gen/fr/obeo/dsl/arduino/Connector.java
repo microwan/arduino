@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Connector#getPin <em>Pin</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Connector#getModule <em>Module</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getConnector()
  * @model
@@ -65,12 +65,12 @@ public interface Connector extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Module</em>' reference.
-	 * @see #setModule(Module)
+	 * @see #setModule(fr.obeo.dsl.arduino.Module)
 	 * @see fr.obeo.dsl.arduino.ArduinoPackage#getConnector_Module()
 	 * @model
 	 * @generated
 	 */
-	Module getModule();
+	fr.obeo.dsl.arduino.Module getModule();
 
 	/**
 	 * Sets the value of the '{@link fr.obeo.dsl.arduino.Connector#getModule <em>Module</em>}' reference.
@@ -80,6 +80,6 @@ public interface Connector extends EObject {
 	 * @see #getModule()
 	 * @generated
 	 */
-	void setModule(Module value);
+	void setModule(fr.obeo.dsl.arduino.Module value);
 
 } // Connector

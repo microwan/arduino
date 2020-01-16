@@ -37,12 +37,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.FunctionImpl#getParamDefs <em>Param Defs</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.FunctionImpl#getInstructions <em>Instructions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -111,6 +111,7 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -120,6 +121,7 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -132,6 +134,7 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterDefinition> getParamDefs() {
 		if (paramDefs == null) {
 			paramDefs = new EObjectContainmentEList<ParameterDefinition>(ParameterDefinition.class, this, ArduinoPackage.FUNCTION__PARAM_DEFS);
@@ -144,6 +147,7 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Instruction> getInstructions() {
 		if (instructions == null) {
 			instructions = new EObjectContainmentEList<Instruction>(Instruction.class, this, ArduinoPackage.FUNCTION__INSTRUCTIONS);
@@ -257,7 +261,7 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

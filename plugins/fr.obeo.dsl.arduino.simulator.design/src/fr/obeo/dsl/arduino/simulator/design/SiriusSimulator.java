@@ -8,6 +8,7 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.sirius.business.api.dialect.command.RefreshRepresentationsCommand;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.viewpoint.DRepresentation;
+import org.eclipse.sirius.viewpoint.DRepresentationDescriptor;
 import org.eclipse.sirius.viewpoint.DView;
 
 import fr.obeo.dsl.arduino.Pin;
@@ -69,11 +70,11 @@ public class SiriusSimulator extends Simulator {
 	public void refresh() {
 		final TransactionalEditingDomain transactionalEditingDomain = session
 				.getTransactionalEditingDomain();
+		
 		final List<DRepresentation> representations = new ArrayList<DRepresentation>();
 		for (DView view : session.getSelectedViews()) {
-			for (DRepresentation representation : view
-					.getOwnedRepresentations()) {
-				representations.add(representation);
+			for (DRepresentationDescriptor representation : view.getOwnedRepresentationDescriptors()) {
+				representations.add(representation.getRepresentation());
 			}
 		}
 		if (representations.size() != 0) {

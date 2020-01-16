@@ -10,6 +10,42 @@
  */
 package fr.obeo.dsl.arduino.util;
 
+import fr.obeo.dsl.arduino.AnalogPin;
+import fr.obeo.dsl.arduino.ArduinoPackage;
+import fr.obeo.dsl.arduino.BooleanOperator;
+import fr.obeo.dsl.arduino.Connector;
+import fr.obeo.dsl.arduino.Constant;
+import fr.obeo.dsl.arduino.Control;
+import fr.obeo.dsl.arduino.Delay;
+import fr.obeo.dsl.arduino.DigitalPin;
+import fr.obeo.dsl.arduino.Function;
+import fr.obeo.dsl.arduino.FunctionCall;
+import fr.obeo.dsl.arduino.Hardware;
+import fr.obeo.dsl.arduino.IO;
+import fr.obeo.dsl.arduino.If;
+import fr.obeo.dsl.arduino.InputModule;
+import fr.obeo.dsl.arduino.Instruction;
+import fr.obeo.dsl.arduino.Level;
+import fr.obeo.dsl.arduino.MathOperator;
+import fr.obeo.dsl.arduino.ModuleInstruction;
+import fr.obeo.dsl.arduino.NamedElement;
+import fr.obeo.dsl.arduino.NumericalOperator;
+import fr.obeo.dsl.arduino.OutputModule;
+import fr.obeo.dsl.arduino.Parameter;
+import fr.obeo.dsl.arduino.ParameterCall;
+import fr.obeo.dsl.arduino.ParameterDefinition;
+import fr.obeo.dsl.arduino.Pin;
+import fr.obeo.dsl.arduino.Platform;
+import fr.obeo.dsl.arduino.Project;
+import fr.obeo.dsl.arduino.Repeat;
+import fr.obeo.dsl.arduino.Sensor;
+import fr.obeo.dsl.arduino.Set;
+import fr.obeo.dsl.arduino.Sketch;
+import fr.obeo.dsl.arduino.Status;
+import fr.obeo.dsl.arduino.Utilities;
+import fr.obeo.dsl.arduino.Value;
+import fr.obeo.dsl.arduino.Variable;
+import fr.obeo.dsl.arduino.While;
 import fr.obeo.dsl.arduino.*;
 import fr.obeo.dsl.arduino.Module;
 
@@ -56,7 +92,7 @@ public class ArduinoSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -90,7 +126,7 @@ public class ArduinoSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ArduinoPackage.MODULE: {
-				Module module = (Module)theEObject;
+				fr.obeo.dsl.arduino.Module module = (fr.obeo.dsl.arduino.Module)theEObject;
 				T result = caseModule(module);
 				if (result == null) result = caseNamedElement(module);
 				if (result == null) result = defaultCase(theEObject);
@@ -397,7 +433,7 @@ public class ArduinoSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseModule(Module object) {
+	public T caseModule(fr.obeo.dsl.arduino.Module object) {
 		return null;
 	}
 

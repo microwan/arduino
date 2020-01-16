@@ -18,11 +18,11 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Set#getVariable <em>Variable</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Set#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getSet()
  * @model

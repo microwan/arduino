@@ -26,11 +26,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.DelayImpl#getUnit <em>Unit</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.DelayImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -99,6 +99,7 @@ public class DelayImpl extends UtilitiesImpl implements Delay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getUnit() {
 		return unit;
 	}
@@ -108,6 +109,7 @@ public class DelayImpl extends UtilitiesImpl implements Delay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(Time newUnit) {
 		Time oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
@@ -120,6 +122,7 @@ public class DelayImpl extends UtilitiesImpl implements Delay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -129,6 +132,7 @@ public class DelayImpl extends UtilitiesImpl implements Delay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(int newValue) {
 		int oldValue = value;
 		value = newValue;
@@ -213,7 +217,7 @@ public class DelayImpl extends UtilitiesImpl implements Delay {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (unit: ");
 		result.append(unit);
 		result.append(", value: ");

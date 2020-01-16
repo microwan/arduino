@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Instruction#getPrevious <em>Previous</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Instruction#getNext <em>Next</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getInstruction()
  * @model abstract="true"

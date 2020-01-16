@@ -32,10 +32,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ControlImpl#getInstructions <em>Instructions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,6 +74,7 @@ public abstract class ControlImpl extends InstructionImpl implements Control {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Instruction> getInstructions() {
 		if (instructions == null) {
 			instructions = new EObjectContainmentEList<Instruction>(Instruction.class, this, ArduinoPackage.CONTROL__INSTRUCTIONS);

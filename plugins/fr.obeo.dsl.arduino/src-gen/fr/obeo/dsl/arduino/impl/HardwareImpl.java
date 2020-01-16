@@ -35,12 +35,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.HardwareImpl#getPlatforms <em>Platforms</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.HardwareImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.HardwareImpl#getConnectors <em>Connectors</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,7 +63,7 @@ public class HardwareImpl extends NamedElementImpl implements Hardware {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Module> modules;
+	protected EList<fr.obeo.dsl.arduino.Module> modules;
 
 	/**
 	 * The cached value of the '{@link #getConnectors() <em>Connectors</em>}' containment reference list.
@@ -99,6 +99,7 @@ public class HardwareImpl extends NamedElementImpl implements Hardware {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Platform> getPlatforms() {
 		if (platforms == null) {
 			platforms = new EObjectResolvingEList<Platform>(Platform.class, this, ArduinoPackage.HARDWARE__PLATFORMS);
@@ -111,9 +112,10 @@ public class HardwareImpl extends NamedElementImpl implements Hardware {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Module> getModules() {
+	@Override
+	public EList<fr.obeo.dsl.arduino.Module> getModules() {
 		if (modules == null) {
-			modules = new EObjectResolvingEList<Module>(Module.class, this, ArduinoPackage.HARDWARE__MODULES);
+			modules = new EObjectResolvingEList<fr.obeo.dsl.arduino.Module>(fr.obeo.dsl.arduino.Module.class, this, ArduinoPackage.HARDWARE__MODULES);
 		}
 		return modules;
 	}
@@ -123,6 +125,7 @@ public class HardwareImpl extends NamedElementImpl implements Hardware {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connector> getConnectors() {
 		if (connectors == null) {
 			connectors = new EObjectContainmentEList<Connector>(Connector.class, this, ArduinoPackage.HARDWARE__CONNECTORS);
@@ -177,7 +180,7 @@ public class HardwareImpl extends NamedElementImpl implements Hardware {
 				return;
 			case ArduinoPackage.HARDWARE__MODULES:
 				getModules().clear();
-				getModules().addAll((Collection<? extends Module>)newValue);
+				getModules().addAll((Collection<? extends fr.obeo.dsl.arduino.Module>)newValue);
 				return;
 			case ArduinoPackage.HARDWARE__CONNECTORS:
 				getConnectors().clear();

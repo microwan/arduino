@@ -34,11 +34,11 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.FunctionCallImpl#getDefinition <em>Definition</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.FunctionCallImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class FunctionCallImpl extends InstructionImpl implements FunctionCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Function getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
@@ -113,6 +114,7 @@ public class FunctionCallImpl extends InstructionImpl implements FunctionCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(Function newDefinition) {
 		Function oldDefinition = definition;
 		definition = newDefinition;
@@ -125,6 +127,7 @@ public class FunctionCallImpl extends InstructionImpl implements FunctionCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectResolvingEList<Parameter>(Parameter.class, this, ArduinoPackage.FUNCTION_CALL__PARAMETERS);

@@ -78,7 +78,7 @@ public class LauncherDelegate extends AbstractDSLLaunchConfigurationDelegateUI {
 	}
 
 	@Override
-	protected String getModelIdentifier() {
+	public String getModelIdentifier() {
 		return MODEL_IDENTIFIER;
 	}
 

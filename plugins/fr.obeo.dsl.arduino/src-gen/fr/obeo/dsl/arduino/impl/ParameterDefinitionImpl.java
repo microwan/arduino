@@ -27,11 +27,11 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ParameterDefinitionImpl#getType <em>Type</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ParameterDefinitionImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +100,7 @@ public class ParameterDefinitionImpl extends EObjectImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterType getType() {
 		return type;
 	}
@@ -109,6 +110,7 @@ public class ParameterDefinitionImpl extends EObjectImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ParameterType newType) {
 		ParameterType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -121,6 +123,7 @@ public class ParameterDefinitionImpl extends EObjectImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -130,6 +133,7 @@ public class ParameterDefinitionImpl extends EObjectImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -214,7 +218,7 @@ public class ParameterDefinitionImpl extends EObjectImpl implements ParameterDef
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
 		result.append(", name: ");

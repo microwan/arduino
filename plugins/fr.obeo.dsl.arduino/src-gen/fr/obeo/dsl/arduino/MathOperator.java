@@ -18,12 +18,12 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.MathOperator#getLeft <em>Left</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.MathOperator#getRight <em>Right</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.MathOperator#getOperator <em>Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getMathOperator()
  * @model abstract="true"

@@ -21,5 +21,5 @@ package fr.obeo.dsl.arduino;
  * @model
  * @generated
  */
-public interface InputModule extends Module {
+public interface InputModule extends fr.obeo.dsl.arduino.Module {
 } // InputModule

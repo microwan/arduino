@@ -39,13 +39,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ProjectImpl#getHardware <em>Hardware</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ProjectImpl#getSketch <em>Sketch</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ProjectImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ProjectImpl#getPlatform <em>Platform</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -78,7 +78,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Module> modules;
+	protected EList<fr.obeo.dsl.arduino.Module> modules;
 
 	/**
 	 * The cached value of the '{@link #getPlatform() <em>Platform</em>}' containment reference list.
@@ -114,6 +114,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Hardware getHardware() {
 		return hardware;
 	}
@@ -138,6 +139,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHardware(Hardware newHardware) {
 		if (newHardware != hardware) {
 			NotificationChain msgs = null;
@@ -157,6 +159,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Sketch getSketch() {
 		return sketch;
 	}
@@ -181,6 +184,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSketch(Sketch newSketch) {
 		if (newSketch != sketch) {
 			NotificationChain msgs = null;
@@ -200,9 +204,10 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Module> getModules() {
+	@Override
+	public EList<fr.obeo.dsl.arduino.Module> getModules() {
 		if (modules == null) {
-			modules = new EObjectContainmentEList<Module>(Module.class, this, ArduinoPackage.PROJECT__MODULES);
+			modules = new EObjectContainmentEList<fr.obeo.dsl.arduino.Module>(fr.obeo.dsl.arduino.Module.class, this, ArduinoPackage.PROJECT__MODULES);
 		}
 		return modules;
 	}
@@ -212,6 +217,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Platform> getPlatform() {
 		if (platform == null) {
 			platform = new EObjectContainmentEList<Platform>(Platform.class, this, ArduinoPackage.PROJECT__PLATFORM);
@@ -276,7 +282,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 				return;
 			case ArduinoPackage.PROJECT__MODULES:
 				getModules().clear();
-				getModules().addAll((Collection<? extends Module>)newValue);
+				getModules().addAll((Collection<? extends fr.obeo.dsl.arduino.Module>)newValue);
 				return;
 			case ArduinoPackage.PROJECT__PLATFORM:
 				getPlatform().clear();

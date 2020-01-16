@@ -27,10 +27,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.LevelImpl#getLevel <em>Level</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -69,6 +69,7 @@ public class LevelImpl extends ModuleInstructionImpl implements Level {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getLevel() {
 		if (level != null && level.eIsProxy()) {
 			InternalEObject oldLevel = (InternalEObject)level;
@@ -95,6 +96,7 @@ public class LevelImpl extends ModuleInstructionImpl implements Level {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLevel(Value newLevel) {
 		Value oldLevel = level;
 		level = newLevel;

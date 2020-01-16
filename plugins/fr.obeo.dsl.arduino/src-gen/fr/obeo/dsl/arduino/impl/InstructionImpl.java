@@ -27,11 +27,11 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.InstructionImpl#getPrevious <em>Previous</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.InstructionImpl#getNext <em>Next</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -80,6 +80,7 @@ public abstract class InstructionImpl extends EObjectImpl implements Instruction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instruction getPrevious() {
 		if (previous != null && previous.eIsProxy()) {
 			InternalEObject oldPrevious = (InternalEObject)previous;
@@ -106,6 +107,7 @@ public abstract class InstructionImpl extends EObjectImpl implements Instruction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrevious(Instruction newPrevious) {
 		Instruction oldPrevious = previous;
 		previous = newPrevious;
@@ -118,6 +120,7 @@ public abstract class InstructionImpl extends EObjectImpl implements Instruction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instruction getNext() {
 		if (next != null && next.eIsProxy()) {
 			InternalEObject oldNext = (InternalEObject)next;
@@ -144,6 +147,7 @@ public abstract class InstructionImpl extends EObjectImpl implements Instruction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNext(Instruction newNext) {
 		Instruction oldNext = next;
 		next = newNext;

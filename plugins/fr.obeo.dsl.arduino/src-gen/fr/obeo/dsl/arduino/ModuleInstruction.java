@@ -18,10 +18,10 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.ModuleInstruction#getModule <em>Module</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getModuleInstruction()
  * @model abstract="true"
@@ -37,12 +37,12 @@ public interface ModuleInstruction extends Instruction, Parameter {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Module</em>' reference.
-	 * @see #setModule(Module)
+	 * @see #setModule(fr.obeo.dsl.arduino.Module)
 	 * @see fr.obeo.dsl.arduino.ArduinoPackage#getModuleInstruction_Module()
 	 * @model required="true"
 	 * @generated
 	 */
-	Module getModule();
+	fr.obeo.dsl.arduino.Module getModule();
 
 	/**
 	 * Sets the value of the '{@link fr.obeo.dsl.arduino.ModuleInstruction#getModule <em>Module</em>}' reference.
@@ -52,6 +52,6 @@ public interface ModuleInstruction extends Instruction, Parameter {
 	 * @see #getModule()
 	 * @generated
 	 */
-	void setModule(Module value);
+	void setModule(fr.obeo.dsl.arduino.Module value);
 
 } // ModuleInstruction

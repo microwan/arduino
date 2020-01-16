@@ -36,12 +36,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.PlatformImpl#getDigitalPins <em>Digital Pins</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.PlatformImpl#getAnalogPins <em>Analog Pins</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.PlatformImpl#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -110,6 +110,7 @@ public class PlatformImpl extends NamedElementImpl implements Platform {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DigitalPin> getDigitalPins() {
 		if (digitalPins == null) {
 			digitalPins = new EObjectContainmentEList<DigitalPin>(DigitalPin.class, this, ArduinoPackage.PLATFORM__DIGITAL_PINS);
@@ -122,6 +123,7 @@ public class PlatformImpl extends NamedElementImpl implements Platform {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AnalogPin> getAnalogPins() {
 		if (analogPins == null) {
 			analogPins = new EObjectContainmentEList<AnalogPin>(AnalogPin.class, this, ArduinoPackage.PLATFORM__ANALOG_PINS);
@@ -134,6 +136,7 @@ public class PlatformImpl extends NamedElementImpl implements Platform {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getImage() {
 		return image;
 	}
@@ -143,6 +146,7 @@ public class PlatformImpl extends NamedElementImpl implements Platform {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImage(String newImage) {
 		String oldImage = image;
 		image = newImage;
@@ -256,7 +260,7 @@ public class PlatformImpl extends NamedElementImpl implements Platform {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (image: ");
 		result.append(image);
 		result.append(')');

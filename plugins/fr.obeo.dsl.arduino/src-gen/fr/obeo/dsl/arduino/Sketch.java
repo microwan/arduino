@@ -19,12 +19,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Sketch#getHardware <em>Hardware</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Sketch#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Sketch#getFunctions <em>Functions</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getSketch()
  * @model

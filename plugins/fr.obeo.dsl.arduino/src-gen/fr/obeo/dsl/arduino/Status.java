@@ -18,11 +18,11 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Status#isStatus <em>Status</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Status#getSensor <em>Sensor</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getStatus()
  * @model

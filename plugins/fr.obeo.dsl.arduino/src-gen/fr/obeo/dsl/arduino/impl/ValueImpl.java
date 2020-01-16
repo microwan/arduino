@@ -28,11 +28,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ValueImpl#getDefinition <em>Definition</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ValueImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +91,7 @@ public abstract class ValueImpl extends InstructionImpl implements Value {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
@@ -117,6 +118,7 @@ public abstract class ValueImpl extends InstructionImpl implements Value {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(ParameterDefinition newDefinition) {
 		ParameterDefinition oldDefinition = definition;
 		definition = newDefinition;
@@ -129,6 +131,7 @@ public abstract class ValueImpl extends InstructionImpl implements Value {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -138,6 +141,7 @@ public abstract class ValueImpl extends InstructionImpl implements Value {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -255,7 +259,7 @@ public abstract class ValueImpl extends InstructionImpl implements Value {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

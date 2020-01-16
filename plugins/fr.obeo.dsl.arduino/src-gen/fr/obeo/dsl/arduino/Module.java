@@ -18,13 +18,13 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Module#getKind <em>Kind</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Module#getImage <em>Image</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Module#isLevel <em>Level</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Module#getLibrary <em>Library</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getModule()
  * @model abstract="true"

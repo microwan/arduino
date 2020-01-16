@@ -19,11 +19,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.FunctionCall#getDefinition <em>Definition</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.FunctionCall#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getFunctionCall()
  * @model

@@ -19,12 +19,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Hardware#getPlatforms <em>Platforms</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Hardware#getModules <em>Modules</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Hardware#getConnectors <em>Connectors</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getHardware()
  * @model
@@ -61,7 +61,7 @@ public interface Hardware extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Module> getModules();
+	EList<fr.obeo.dsl.arduino.Module> getModules();
 
 	/**
 	 * Returns the value of the '<em><b>Connectors</b></em>' containment reference list.

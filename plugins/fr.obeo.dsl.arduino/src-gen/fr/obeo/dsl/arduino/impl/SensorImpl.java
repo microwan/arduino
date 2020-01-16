@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.SensorImpl#getValue <em>Value</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.SensorImpl#getLeft <em>Left</em>}</li>
@@ -46,7 +47,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.arduino.impl.SensorImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.SensorImpl#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -145,6 +145,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -154,6 +155,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -166,6 +168,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getLeft() {
 		if (left != null && left.eIsProxy()) {
 			InternalEObject oldLeft = (InternalEObject)left;
@@ -192,6 +195,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeft(Value newLeft) {
 		Value oldLeft = left;
 		left = newLeft;
@@ -204,6 +208,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getRight() {
 		if (right != null && right.eIsProxy()) {
 			InternalEObject oldRight = (InternalEObject)right;
@@ -230,6 +235,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRight(Value newRight) {
 		Value oldRight = right;
 		right = newRight;
@@ -242,6 +248,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperatorKind getOperator() {
 		return operator;
 	}
@@ -251,6 +258,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(OperatorKind newOperator) {
 		OperatorKind oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
@@ -263,6 +271,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Status> getStatus() {
 		if (status == null) {
 			status = new EObjectWithInverseResolvingEList<Status>(Status.class, this, ArduinoPackage.SENSOR__STATUS, ArduinoPackage.STATUS__SENSOR);
@@ -468,7 +477,7 @@ public class SensorImpl extends ModuleInstructionImpl implements Sensor {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(", operator: ");

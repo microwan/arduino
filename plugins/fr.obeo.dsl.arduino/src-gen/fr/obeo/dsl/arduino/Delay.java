@@ -18,11 +18,11 @@ package fr.obeo.dsl.arduino;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.Delay#getUnit <em>Unit</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.Delay#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.obeo.dsl.arduino.ArduinoPackage#getDelay()
  * @model

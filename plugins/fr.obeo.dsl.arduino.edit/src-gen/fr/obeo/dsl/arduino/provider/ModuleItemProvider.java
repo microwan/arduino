@@ -37,13 +37,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ModuleItemProvider
-	extends NamedElementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -169,7 +163,7 @@ public class ModuleItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Module)object).getName();
+		String label = ((fr.obeo.dsl.arduino.Module)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Module_type") :
 			getString("_UI_Module_type") + " " + label;
@@ -186,7 +180,7 @@ public class ModuleItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Module.class)) {
+		switch (notification.getFeatureID(fr.obeo.dsl.arduino.Module.class)) {
 			case ArduinoPackage.MODULE__KIND:
 			case ArduinoPackage.MODULE__IMAGE:
 			case ArduinoPackage.MODULE__LEVEL:

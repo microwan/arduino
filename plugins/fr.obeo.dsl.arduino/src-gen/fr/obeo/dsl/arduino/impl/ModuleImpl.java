@@ -27,17 +27,17 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ModuleImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ModuleImpl#getImage <em>Image</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ModuleImpl#isLevel <em>Level</em>}</li>
  *   <li>{@link fr.obeo.dsl.arduino.impl.ModuleImpl#getLibrary <em>Library</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class ModuleImpl extends NamedElementImpl implements Module {
+public abstract class ModuleImpl extends NamedElementImpl implements fr.obeo.dsl.arduino.Module {
 	/**
 	 * The default value of the '{@link #getKind() <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -142,6 +142,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModuleKind getKind() {
 		return kind;
 	}
@@ -151,6 +152,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(ModuleKind newKind) {
 		ModuleKind oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
@@ -163,6 +165,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getImage() {
 		return image;
 	}
@@ -172,6 +175,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImage(String newImage) {
 		String oldImage = image;
 		image = newImage;
@@ -184,6 +188,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLevel() {
 		return level;
 	}
@@ -193,6 +198,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLevel(boolean newLevel) {
 		boolean oldLevel = level;
 		level = newLevel;
@@ -205,6 +211,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Library getLibrary() {
 		return library;
 	}
@@ -214,6 +221,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLibrary(Library newLibrary) {
 		Library oldLibrary = library;
 		library = newLibrary == null ? LIBRARY_EDEFAULT : newLibrary;
@@ -318,7 +326,7 @@ public abstract class ModuleImpl extends NamedElementImpl implements Module {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (kind: ");
 		result.append(kind);
 		result.append(", image: ");
