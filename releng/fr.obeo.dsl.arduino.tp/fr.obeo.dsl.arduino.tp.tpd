@@ -36,6 +36,7 @@ location "http://download.eclipse.org/releases/2019-12/" {
 	org.eclipse.equinox.serverside.sdk.feature.group lazy
 	org.eclipse.equinox.simpleconfigurator lazy
 	org.apache.batik.css lazy
+	org.junit lazy
 }
 
 location "https://download.eclipse.org/modeling/amalgam/updates/releases/1.7.0/" {
@@ -68,3 +69,12 @@ location "https://download.eclipse.org/sirius/updates/releases/6.3.0/2019-06/" {
 	org.eclipse.sirius.specifier.ide.ui.feature.group lazy
 	org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group lazy
 }
+
+// Simulator
+location "http://gemoc.org/updatesite/studio"
+{
+	fr.obeo.dsl.debug.feature.feature.group lazy
+	fr.obeo.dsl.debug.sirius.ui.feature.feature.group lazy
+	fr.obeo.dsl.debug.ui.feature.feature.group lazy
+}
+
