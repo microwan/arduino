@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="ArduinoDesigner-201912" sequenceNumber="1579186693">
+<target name="ArduinoDesigner-201912" sequenceNumber="1579272800">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.sdk" version="0.0.0"/>
@@ -57,13 +57,23 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sirius.runtime.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.sirius.runtime.ide.eef.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.ide.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.acceleo.query.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.ide.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.aql.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group" version="0.0.0"/>
-      <repository location="https://download.eclipse.org/sirius/updates/releases/6.3.0/2019-06/"/>
+      <unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.interpreter.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.eef.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.tests.support.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.compare.diagram.sirius.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.compare.ide.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.compare.egit.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.compare.feature.group" version="0.0.0"/>
+      <unit id="fr.obeo.dsl.designer.ce.feature.feature.group" version="0.0.0"/>
+      <repository location="http://www.obeo.fr/download/release/designer/11.3/community/latest/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="fr.obeo.dsl.debug.feature.feature.group" version="0.0.0"/>

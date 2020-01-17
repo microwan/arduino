@@ -58,16 +58,26 @@ location "https://download.eclipse.org/acceleo/updates/releases/3.7/R20191106071
 }
 
 // Sirius
-location "https://download.eclipse.org/sirius/updates/releases/6.3.0/2019-06/" {
+location "http://www.obeo.fr/download/release/designer/11.3/community/latest/repository" {
 	//runtime
 	org.eclipse.sirius.runtime.feature.group lazy
-	org.eclipse.sirius.runtime.acceleo.feature.group lazy
 	//IDE
-	org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group lazy
-	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
 	org.eclipse.sirius.runtime.ide.ui.feature.group lazy
+	org.eclipse.acceleo.query.feature.group lazy
 	org.eclipse.sirius.specifier.ide.ui.feature.group lazy
+	org.eclipse.sirius.specifier.ide.ui.aql.feature.group lazy
 	org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group lazy
+	org.eclipse.sirius.runtime.acceleo.feature.group lazy
+	org.eclipse.sirius.interpreter.feature.feature.group lazy
+	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group lazy
+	org.eclipse.sirius.doc.feature.feature.group lazy
+	org.eclipse.sirius.tests.support.feature.group lazy
+	org.eclipse.emf.compare.diagram.sirius.feature.group lazy
+	org.eclipse.emf.compare.ide.ui.feature.group lazy
+	org.eclipse.emf.compare.egit.feature.group lazy
+	org.eclipse.emf.compare.feature.group lazy
+	fr.obeo.dsl.designer.ce.feature.feature.group lazy
 }
 
 // Simulator
