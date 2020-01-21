@@ -4,8 +4,7 @@ import org.eclipse.debug.ui.AbstractLaunchConfigurationTabGroup;
 import org.eclipse.debug.ui.CommonTab;
 import org.eclipse.debug.ui.ILaunchConfigurationDialog;
 import org.eclipse.debug.ui.ILaunchConfigurationTab;
-
-import fr.obeo.dsl.debug.ide.sirius.ui.launch.DSLLaunchConfigurationTab;
+import org.eclipse.gemoc.dsl.debug.ide.sirius.ui.launch.DSLLaunchConfigurationTab;
 
 public class TabGroup extends AbstractLaunchConfigurationTabGroup {
 

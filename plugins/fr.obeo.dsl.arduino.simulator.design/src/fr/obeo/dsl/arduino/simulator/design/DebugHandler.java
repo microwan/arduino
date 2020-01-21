@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.gemoc.dsl.debug.ide.launch.AbstractDSLLaunchConfigurationDelegate;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
 import org.eclipse.sirius.business.api.session.Session;
@@ -35,8 +36,6 @@ import org.eclipse.ui.PlatformUI;
 import fr.obeo.dsl.arduino.Project;
 import fr.obeo.dsl.arduino.design.ArduinoDesignerUtils;
 import fr.obeo.dsl.arduino.simulator.design.launcher.LauncherDelegate;
-import fr.obeo.dsl.debug.ide.Activator;
-import fr.obeo.dsl.debug.ide.launch.AbstractDSLLaunchConfigurationDelegate;
 
 public class DebugHandler extends AbstractHandler {
 
@@ -78,7 +77,7 @@ public class DebugHandler extends AbstractHandler {
 				}
 
 			} catch (CoreException e) {
-				Activator.getDefault().error(e);
+				//Activator.getDefault().error(e);
 			}
 		}
 

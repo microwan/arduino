@@ -6,14 +6,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gemoc.dsl.debug.ide.AbstractDSLDebugger;
+import org.eclipse.gemoc.dsl.debug.ide.event.IDSLDebugEventProcessor;
 
 import fr.obeo.dsl.arduino.Connector;
 import fr.obeo.dsl.arduino.Pin;
 import fr.obeo.dsl.arduino.Value;
 import fr.obeo.dsl.arduino.Variable;
 import fr.obeo.dsl.arduino.simulator.Simulator;
-import fr.obeo.dsl.debug.ide.AbstractDSLDebugger;
-import fr.obeo.dsl.debug.ide.event.IDSLDebugEventProcessor;
 
 /**
  * Debugger for {@link Simulator}.

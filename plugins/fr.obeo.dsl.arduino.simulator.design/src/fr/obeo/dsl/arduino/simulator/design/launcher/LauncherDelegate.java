@@ -7,6 +7,9 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gemoc.dsl.debug.ide.IDSLDebugger;
+import org.eclipse.gemoc.dsl.debug.ide.event.DSLDebugEventDispatcher;
+import org.eclipse.gemoc.dsl.debug.ide.ui.launch.AbstractDSLLaunchConfigurationDelegateUI;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.sirius.business.api.session.SessionManager;
 import org.eclipse.ui.IEditorPart;
@@ -17,9 +20,6 @@ import fr.obeo.dsl.arduino.simulator.Simulator;
 import fr.obeo.dsl.arduino.simulator.debug.SimulatorDebugger;
 import fr.obeo.dsl.arduino.simulator.design.Activator;
 import fr.obeo.dsl.arduino.simulator.design.SiriusSimulator;
-import fr.obeo.dsl.debug.ide.IDSLDebugger;
-import fr.obeo.dsl.debug.ide.event.DSLDebugEventDispatcher;
-import fr.obeo.dsl.debug.ide.sirius.ui.launch.AbstractDSLLaunchConfigurationDelegateUI;
 
 public class LauncherDelegate extends AbstractDSLLaunchConfigurationDelegateUI {
 

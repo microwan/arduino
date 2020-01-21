@@ -1,7 +1,8 @@
 package fr.obeo.dsl.arduino.simulator.design.action;
 
+import org.eclipse.gemoc.dsl.debug.ide.sirius.ui.action.AbstractToggleBreakpointAction;
+
 import fr.obeo.dsl.arduino.simulator.design.launcher.LauncherDelegate;
-import fr.obeo.dsl.debug.ide.sirius.ui.action.AbstractToggleBreakpointAction;
 
 public class ToggleBreakpointAction extends AbstractToggleBreakpointAction {
 

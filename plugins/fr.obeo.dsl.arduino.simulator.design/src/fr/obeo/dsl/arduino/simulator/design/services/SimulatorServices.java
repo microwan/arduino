@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gemoc.dsl.debug.ide.sirius.ui.services.AbstractDSLDebuggerServices;
 import org.osgi.framework.Bundle;
 
 import fr.obeo.dsl.arduino.ArduinoUtils;
@@ -15,7 +16,6 @@ import fr.obeo.dsl.arduino.Platform;
 import fr.obeo.dsl.arduino.design.services.ArduinoServices;
 import fr.obeo.dsl.arduino.simulator.Simulator;
 import fr.obeo.dsl.arduino.simulator.design.launcher.LauncherDelegate;
-import fr.obeo.dsl.debug.ide.sirius.ui.services.AbstractDSLDebuggerServices;
 
 public class SimulatorServices extends AbstractDSLDebuggerServices {
 
