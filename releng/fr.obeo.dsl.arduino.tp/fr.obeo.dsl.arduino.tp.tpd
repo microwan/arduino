@@ -63,6 +63,7 @@ location "http://www.obeo.fr/download/release/designer/11.3/community/latest/rep
 	org.eclipse.sirius.runtime.feature.group lazy
 	//IDE
 	org.eclipse.sirius.runtime.ide.ui.feature.group lazy
+	org.eclipse.sirius
 	org.eclipse.acceleo.query.feature.group lazy
 	org.eclipse.sirius.specifier.ide.ui.feature.group lazy
 	org.eclipse.sirius.specifier.ide.ui.aql.feature.group lazy
@@ -81,10 +82,14 @@ location "http://www.obeo.fr/download/release/designer/11.3/community/latest/rep
 }
 
 // Simulator
-location "http://gemoc.org/updatesite/studio"
+location "https://download.eclipse.org/gemoc/updates/latest_stable"
 {
-	fr.obeo.dsl.debug.feature.feature.group lazy
-	fr.obeo.dsl.debug.sirius.ui.feature.feature.group lazy
-	fr.obeo.dsl.debug.ui.feature.feature.group lazy
+	
+	org.eclipse.gemoc.dsl.debug.feature.feature.group lazy
+	org.eclipse.gemoc.dsl.debug.ui.feature.feature.group lazy
+	org.eclipse.gemoc.dsl.debug.sirius.ui.feature.feature.group lazy
+//	fr.obeo.dsl.debug.feature.feature.group
+//	fr.obeo.dsl.debug.sirius.ui.feature.feature.group
+//	fr.obeo.dsl.debug.ui.feature.feature.group
 }
 
